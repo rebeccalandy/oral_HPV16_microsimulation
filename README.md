@@ -8,19 +8,21 @@ Calculates weights for each subcohort (race by smoking status by lifetime quarti
 Calculates weights for each subcohort for men aged 80-84, using NHIS 2009-2016 data.
 3.	File name: create_splines.R
 Calculates the spline terms when using age with a 5 knot spline
-4.	File name: Logistic_regression_new_partner.sas
+4.	File name: NHANES2009_16.create.variables.sas
+File creating variable in NHANES 2009-16 for use in future code
+5.	File name: Logistic_regression_new_partner.sas
 Logistic regression model to predict whether an individual has an oral sex partner in the past 12 months
-5.	File name: negative_binomial_number_of_partners.R
+6.	File name: negative_binomial_number_of_partners.R
 Negative binomial model of the number of recent female oral sex partners, using data from men in NHANES 2009-16. 
-6.	File name: partner_age_distribution.R
+7.	File name: partner_age_distribution.R
 Calculates the age distribution of men’s sexual partners, using data from NHANES 2005-6 to get 3 broad categories, then data from NATSAL 3 to get 5-year groups (relative to the age of the man)
-7.	File name: cervical_HPV_prevalence_median_quartile_modelled.R
+8.	File name: cervical_HPV_prevalence_median_quartile_modelled.R
 Models cervical HPV16 prevalence in NHANES 2005-06, using a 3-knot spline for age
-8.	File name: gridsearch_code_upto74.sas
+9.	File name: gridsearch_code_upto74.sas
 Running a model to get the starting points of a grid search for the probability of developing cancer within the next year from an HPV16 infection, by duration of infection.  
-9.	File name: penetrance.quadratic.gridsearch.R
+10.	File name: penetrance.quadratic.gridsearch.R
 Create a file containing all the penetrance combinations (probability of developing cancer given an x-year HPV infection)
-10.	File name: nhis2010_14_men_1yrdeathrates.R
+11.	File name: nhis2010_14_men_1yrdeathrates.R
 1-year mortality model using data from NHIS 2010-2014
 
 
