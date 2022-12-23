@@ -1,6 +1,3 @@
-# oral_HPV16_microsimulation
-Code for the manuscript 'Upper age-limits for US male HPV-vaccination for oropharyngeal cancer prevention: A microsimulation-based modeling study' by Landy et al
-
 Creating input data:
 1.	File name: creating_weights.R  
 Calculates weights for each subcohort (race by smoking status by lifetime quartile of sexual partners, by age) for men aged 15-79, using NHANES 2009-2016 data.
@@ -10,23 +7,23 @@ Calculates weights for each subcohort for men aged 80-84, using NHIS 2009-2016 d
 Calculates the spline terms when using age with a 5 knot spline
 4.	File name: NHANES2009_16.create.variables.sas
 File creating variable in NHANES 2009-16 for use in future code
-5.	File name: Logistic_regression_new_partner.sas
+5.	File name: NHANES0916.make.wt8yr.sas
+File creating post stratification weights for NHANES 2009-2016
+6.	File name: Logistic_regression_new_partner.sas
 Logistic regression model to predict whether an individual has an oral sex partner in the past 12 months
-6.	File name: negative_binomial_number_of_partners.R
+7.	File name: negative_binomial_number_of_partners.R
 Negative binomial model of the number of recent female oral sex partners, using data from men in NHANES 2009-16. 
-7.	File name: partner_age_distribution.R
+8.	File name: partner_age_distribution.R
 Calculates the age distribution of men’s sexual partners, using data from NHANES 2005-6 to get 3 broad categories, then data from NATSAL 3 to get 5-year groups (relative to the age of the man)
-8.	File name: cervical_HPV_prevalence_median_quartile_modelled.R
+9.	File name: cervical_HPV_prevalence_median_quartile_modelled.R
 Models cervical HPV16 prevalence in NHANES 2005-06, using a 3-knot spline for age
-9.	File name: gridsearch_code_upto74.sas
+10.	File name: gridsearch_code_upto74.sas
 Running a model to get the starting points of a grid search for the probability of developing cancer within the next year from an HPV16 infection, by duration of infection.  
-10.	File name: penetrance.quadratic.gridsearch.R
+11.	File name: penetrance.quadratic.gridsearch.R
 Create a file containing all the penetrance combinations (probability of developing cancer given an x-year HPV infection)
-11.	File name: nhis2010_14_men_1yrdeathrates.R
-1-year mortality model using data from NHIS 2010-2014
+12.	File name: nhis2010_14_men_1yrdeathrates.R
+1-year mortality model using data from NHIS 2010-2014 
 
-
- 
 Running the simulations:
 1.	File name: sims.R
 Running natural history simulations; uses src/functions.cpp and R/functions.R
@@ -48,5 +45,3 @@ Analyzing the output
 Creating a summary of the total number of cancers under each vaccination scenario, grouped by birth cohort
 2.	File name: cancer_reduction_SQ26_calc_for_each_natural_history.R
 Calculating the reduction in cervical cancer incidence by birth cohort, relative to under status quo vaccination up to age 26
-
-
